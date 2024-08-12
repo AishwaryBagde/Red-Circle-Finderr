@@ -1,6 +1,3 @@
-# Login-Page-Automation
-This repo contains Automation of https://www.saucedemo.com/ Website 
-
 # Selenium Boilerplate:
 
 This java project contains the essentials to get started with selenium quickly without having to go through the hassle of downloading individual dependencies one by one.
@@ -52,4 +49,3 @@ _Test cases are part of the /src/main/java/demo/TestCases.java file._
 ```
 
 3.  Call the newly created methods under the TODO block
-
