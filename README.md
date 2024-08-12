@@ -1,3 +1,8 @@
+LoginAutomationBranch
+# Login-Page-Automation
+
+This repo contains Automation of https://www.saucedemo.com/ Website
+
 # Selenium Boilerplate:
 
 This java project contains the essentials to get started with selenium quickly without having to go through the hassle of downloading individual dependencies one by one.
@@ -17,13 +22,12 @@ This project uses gradle , webdriver manager , selenium v4
 1.  clone this repo to your machine using git clone
 2.  To build the project:
     _MacOS_ / _Linux_
-    `      ./gradlew build
-     `
+    `    ./gradlew build`
     _Windows_
 
-    ```
-    gradlew.bat build
-    ```
+        ```
+        gradlew.bat build
+        ```
 
 3.  To run the project:
     _MacOS_ / _Linux_
@@ -44,8 +48,5 @@ _Test cases are part of the /src/main/java/demo/TestCases.java file._
 1.  open /src/App.java
 2.  notice the TODO block:
 
-```
-//TODO: call your test case functions one after other here
-```
 
-3.  Call the newly created methods under the TODO block
+
