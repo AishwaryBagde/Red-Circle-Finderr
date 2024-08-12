@@ -1,3 +1,4 @@
+LoginAutomationBranch
 # Login-Page-Automation
 
 This repo contains Automation of https://www.saucedemo.com/ Website
@@ -47,12 +48,5 @@ _Test cases are part of the /src/main/java/demo/TestCases.java file._
 1.  open /src/App.java
 2.  notice the TODO block:
 
-```
-//TODO: call your test case functions one after other here
-```
 
-3.  Call the newly created methods under the TODO block
 
-# Login-Test-Automation2
-
-About This repo contains Automation of https://www.saucedemo.com/ Website
