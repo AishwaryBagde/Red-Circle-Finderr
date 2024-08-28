@@ -17,6 +17,8 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+     maven { url "https://repo.bytedeco.org/bytedeco" }
+    jcenter() // Sometimes useful if Maven Central doesn't have the artifacts
 }
 
 // dependencies {
@@ -26,19 +28,43 @@ repositories {
 
     
 //}
-dependencies {
-    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
-    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.5.3'
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.20.0'
-
-    
-}
 // dependencies {
-//     testImplementation 'junit:junit:4.13.2' // Updated JUnit version
-//     implementation 'io.github.bonigarcia:webdrivermanager:5.5.3' // Update to latest stable version
-//     implementation 'org.seleniumhq.selenium:selenium-java:4.20.0' // Use the latest stable Selenium version
+// //     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+// //     implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.5.3'
+// //     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.20.0'
+// //     implementation 'org.slf4j:slf4j-simple:2.0.9' // Example for SLF4J Simple
+// // // https://mvnrepository.com/artifact/org.bytedeco/opencv
+// //    implementation 'org.bytedeco:opencv:4.9.0-1.5.10'
+// //     implementation 'org.bytedeco:javacv:1.5.10'
+    
 // }
 
+//mew
+// dependencies {
+//     testImplementation 'junit:junit:4.13.2'
+//     implementation 'io.github.bonigarcia:webdrivermanager:5.5.3'
+//     implementation 'org.seleniumhq.selenium:selenium-java:4.20.0'
+//     implementation 'org.slf4j:slf4j-simple:2.0.9'
+
+//     // OpenCV and JavaCV dependencies
+//     implementation 'org.bytedeco:opencv:4.5.5-1.5.8'
+//     implementation 'org.bytedeco:javacv:1.5.8'
+// }
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:4.6.0'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.3.1'
+    implementation 'org.slf4j:slf4j-api:2.0.7'
+    implementation 'org.slf4j:slf4j-simple:2.0.7'
+    
+    // Update these dependencies
+    implementation 'org.bytedeco:javacv-platform:1.5.10'
+    implementation 'org.bytedeco:opencv-platform:4.5.5-1.5.10'
+    implementation 'org.bytedeco:javacpp:1.5.10'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+}
 
 //task startScript(type:Exec) {
 //    commandLine './selenium-run.sh'
@@ -47,5 +73,13 @@ dependencies {
 //run.dependsOn startScript
 
 //test.dependsOn startScript
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+}
 
 mainClassName = 'demo.App'
